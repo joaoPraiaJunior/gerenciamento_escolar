@@ -2,10 +2,7 @@ package com.gerenciamento_escolar.api.entity.model.Pessoa;
 
 import java.time.LocalDate;
 
-import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
-
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +13,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pessoa {
-    private String nome;
     private String nome_mae;
     private String nome_pai;
     private LocalDate data_nascimento;
@@ -31,11 +27,7 @@ public class Pessoa {
     private String email;
     private String telefone;
 
-    @Embedded
-    private Endereco endereco;
-
     public Pessoa(DadosPessoa dados) {
-        this.nome = dados.nome();
         this.nome_mae = dados.nome_mae();
         this.nome_pai = dados.nome_pai();
         this.data_nascimento = LocalDate.parse(dados.data_nascimento());
@@ -49,14 +41,9 @@ public class Pessoa {
         this.data_emissao = LocalDate.parse(dados.data_emissao());
         this.email = dados.email();
         this.telefone = dados.telefone();
-        this.endereco = new Endereco(dados.endereco());
     }
 
     public void atualizarInformacoesPessoa(DadosPessoa dados) {
-        if(dados.nome() != null) {
-            this.nome = dados.nome();
-        }
-
         if(dados.nome_mae() != null) {
             this.nome_mae = dados.nome_mae();
         }
@@ -107,10 +94,6 @@ public class Pessoa {
 
         if(dados.telefone() != null) {
             this.telefone = dados.telefone();
-        }
-
-        if(dados.endereco() != null) {
-            this.endereco.atualizarInformacoes(dados.endereco());
         }
     }
 }

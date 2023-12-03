@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Endereco {
-
     private String logradouro;
     private String complemento;
     private String numero;
@@ -30,7 +29,7 @@ public class Endereco {
         this.complemento = dados.complemento();
     }
 
-    public void atualizarInformacoes(DadosEndereco dados) {
+    public void atualizarInformacoesEndereco(DadosEndereco dados) {
         if(dados.logradouro() != null) {
             this.logradouro = dados.logradouro();
         }
@@ -59,4 +58,6 @@ public class Endereco {
             this.complemento = dados.complemento();
         }
     }
+
 }
+

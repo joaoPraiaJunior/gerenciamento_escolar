@@ -1,15 +1,9 @@
 package com.gerenciamento_escolar.api.entity.model.Pessoa;
 
-import com.gerenciamento_escolar.api.entity.model.endereco.DadosEndereco;
-
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 public record DadosPessoa(
-        @NotBlank(message = "O nome é obrigatório")
-        String nome,
 
         String nome_mae,
         String nome_pai,
@@ -50,9 +44,6 @@ public record DadosPessoa(
         String email,
 
         @NotBlank(message = "O telefone é obrigatório")
-        String telefone,
-
-        @NotNull @Valid DadosEndereco endereco
+        String telefone
 ) {
-    
 }

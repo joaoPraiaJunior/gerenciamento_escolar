@@ -27,6 +27,5 @@ public record DadosCadastroEscola(
 
         String youtube,
 
-        @NotNull @Valid
-        DadosEndereco endereco) {
+        @NotNull @Valid DadosEndereco endereco) {
 }
