@@ -1,9 +1,12 @@
-package com.gerenciamento_escolar.api.entity.model.escola;
+package com.gerenciamento_escolar.api.entity.model.Diretor;
 
+import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,53 +16,47 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "escola")
-@Entity(name = "Escola")
+@Table(name = "diretor")
+@Entity(name = "Diretor")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Escola {
+public class Diretor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
-    private String cnpj;
-    private String email;
-    private String telefone;
-    private String instagram;
-    private String youtube;
-    private boolean ativo;
+
+    @Embedded
+    private Pessoa pessoa;
 
     @Embedded
     private Endereco endereco;
 
-    public Escola(DadosCadastroEscola dados) {
+    @Enumerated(EnumType.STRING)
+    private CargoDiretoria cargoDiretoria;
+
+    private boolean ativo;
+
+    public Diretor(DadosCadastroDiretor dados) {
         this.ativo = true;
         this.nome = dados.nome();
-        this.cnpj = dados.cnpj();
-        this.email = dados.email();
-        this.telefone = dados.telefone();
-        this.instagram = dados.instagram();
-        this.youtube = dados.youtube();
+        this.cargoDiretoria = dados.cargoDiretoria();
+        this.pessoa = new Pessoa(dados.pessoa());
         this.endereco = new Endereco(dados.endereco());
     }
 
-    public void atualizar(DadosAtualizaEscola dados) {
+    public void atualizar(DadosAtualizaDiretor dados) {
         if (dados.nome() != null) {
             this.nome = dados.nome();
         }
-        if (dados.email() != null) {
-            this.email = dados.email();
+        if (dados.cargoDiretoria() != null) {
+            this.cargoDiretoria = dados.cargoDiretoria();
         }
-        if (dados.telefone() != null) {
-            this.telefone = dados.telefone();
-        }
-        if (dados.instagram() != null) {
-            this.instagram = dados.instagram();
-        }
-        if (dados.youtube() != null) {
-            this.youtube = dados.youtube();
+        if (dados.pessoa() != null) {
+            this.pessoa.atualizarInformacoesPessoa(dados.pessoa());
         }
         if (dados.endereco() != null) {
             this.endereco.atualizarInformacoesEndereco(dados.endereco());
@@ -69,4 +66,5 @@ public class Escola {
     public void inativar() {
         this.ativo = false;
     }
+
 }
