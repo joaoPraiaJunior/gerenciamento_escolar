@@ -34,7 +34,6 @@ public class Pessoa {
     @Embedded
     private Endereco endereco;
 
-
     public Pessoa(DadosPessoa dados) {
         this.nome = dados.nome();
         this.nome_mae = dados.nome_mae();
