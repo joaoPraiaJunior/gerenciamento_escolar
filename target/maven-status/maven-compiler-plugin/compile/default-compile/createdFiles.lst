@@ -1,1 +1,10 @@
+com\gerenciamento_escolar\api\controller\EscolaController.class
+com\gerenciamento_escolar\api\repository\EscolaRepository.class
 com\gerenciamento_escolar\api\ApiApplication.class
+com\gerenciamento_escolar\api\entity\model\escola\DadosAtualizaEscola.class
+com\gerenciamento_escolar\api\entity\model\endereco\DadosEndereco.class
+com\gerenciamento_escolar\api\entity\model\escola\DadosCadastroEscola.class
+com\gerenciamento_escolar\api\entity\model\escola\DadosDetalhamentoEscola.class
+com\gerenciamento_escolar\api\entity\model\endereco\Endereco.class
+com\gerenciamento_escolar\api\entity\model\escola\Escola.class
+com\gerenciamento_escolar\api\entity\model\escola\DadosListagemEscola.class
