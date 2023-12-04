@@ -1,0 +1,1 @@
+insert into usuarios (login, senha) values ('diretor@escola.com.br', '123456')
