@@ -22,11 +22,13 @@ import com.gerenciamento_escolar.api.entity.model.escola.DadosListagemEscola;
 import com.gerenciamento_escolar.api.entity.model.escola.Escola;
 import com.gerenciamento_escolar.api.repository.EscolaRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/escola")
+@SecurityRequirement(name = "bearer-key")
 public class EscolaController {
 
     @Autowired

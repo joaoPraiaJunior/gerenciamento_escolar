@@ -22,11 +22,13 @@ import com.gerenciamento_escolar.api.entity.model.professor.DadosListagemProfess
 import com.gerenciamento_escolar.api.entity.model.professor.Professor;
 import com.gerenciamento_escolar.api.repository.ProfessorRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/professor")
+@SecurityRequirement(name = "bearer-key")
 public class ProfessorController {
 
     @Autowired
