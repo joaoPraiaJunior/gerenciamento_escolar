@@ -1,4 +1,4 @@
-package com.gerenciamento_escolar.api.infra.exception.security;
+package com.gerenciamento_escolar.api.infra.exception;
 
 import java.nio.file.AccessDeniedException;
 

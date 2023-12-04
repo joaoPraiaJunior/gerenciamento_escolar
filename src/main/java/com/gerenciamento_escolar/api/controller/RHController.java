@@ -22,11 +22,13 @@ import com.gerenciamento_escolar.api.entity.model.RH.DadosListagemRH;
 import com.gerenciamento_escolar.api.entity.model.RH.RH;
 import com.gerenciamento_escolar.api.repository.RHRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/funcionario-rh")
+@SecurityRequirement(name = "bearer-key")
 public class RHController {
 
     @Autowired

@@ -22,11 +22,13 @@ import com.gerenciamento_escolar.api.entity.model.Secretaria.DadosListagemSecret
 import com.gerenciamento_escolar.api.entity.model.Secretaria.Secretario;
 import com.gerenciamento_escolar.api.repository.SecretarioRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/funcionario-secretaria")
+@SecurityRequirement(name = "bearer-key")
 public class SecretarioControler {
 
     @Autowired
@@ -34,6 +36,7 @@ public class SecretarioControler {
 
     @PostMapping
     @Transactional
+    @SecurityRequirement(name = "bearer-key")
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroSecretario dados,
             UriComponentsBuilder uriBuilder) {
         var rh = new Secretario(dados);

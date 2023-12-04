@@ -22,11 +22,13 @@ import com.gerenciamento_escolar.api.entity.model.Diretor.DadosListagemDiretor;
 import com.gerenciamento_escolar.api.entity.model.Diretor.Diretor;
 import com.gerenciamento_escolar.api.repository.DiretorRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/diretor")
+@SecurityRequirement(name = "bearer-key")
 public class DiretorController {
 
     @Autowired

@@ -22,11 +22,13 @@ import com.gerenciamento_escolar.api.entity.model.aluno.DadosDetalhamentoAluno;
 import com.gerenciamento_escolar.api.entity.model.aluno.DadosListagemAluno;
 import com.gerenciamento_escolar.api.repository.AlunoRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/aluno")
+@SecurityRequirement(name = "bearer-key")
 public class AlunoController {
     @Autowired
     private AlunoRepository repository;
