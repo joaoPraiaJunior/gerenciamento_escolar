@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.gerenciamento_escolar.api.entity.model.RH.DadosAtualizaRH;
-import com.gerenciamento_escolar.api.entity.model.RH.DadosCadastroRH;
-import com.gerenciamento_escolar.api.entity.model.RH.DadosDetalhamentoRH;
-import com.gerenciamento_escolar.api.entity.model.RH.DadosListagemRH;
-import com.gerenciamento_escolar.api.entity.model.RH.RH;
+import com.gerenciamento_escolar.api.entity.model.rh.DadosAtualizaRH;
+import com.gerenciamento_escolar.api.entity.model.rh.DadosCadastroRH;
+import com.gerenciamento_escolar.api.entity.model.rh.DadosDetalhamentoRH;
+import com.gerenciamento_escolar.api.entity.model.rh.DadosListagemRH;
+import com.gerenciamento_escolar.api.entity.model.rh.RH;
 import com.gerenciamento_escolar.api.repository.RHRepository;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

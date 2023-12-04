@@ -1,7 +1,7 @@
 package com.gerenciamento_escolar.api.entity.model.aluno;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;

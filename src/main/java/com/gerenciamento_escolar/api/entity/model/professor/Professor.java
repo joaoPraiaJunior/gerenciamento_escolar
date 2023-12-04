@@ -2,8 +2,8 @@ package com.gerenciamento_escolar.api.entity.model.professor;
 
 import java.time.LocalDate;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -32,7 +32,9 @@ public class Professor {
     private String nome;
     private String graduacao;
     private String instituicao_formacao;
+
     private LocalDate data_formacao;
+
     private boolean licenciatura;
     private String especializacao;
     private String mestrado;
@@ -47,7 +49,7 @@ public class Professor {
     private boolean ativo;
 
     @Enumerated(EnumType.STRING)
-    private AulaDisciplina aulaDisciplina;
+    private AulaDisciplina aula_disciplina;
 
     public Professor(DadosCadastroProfessor dados) {
         this.ativo = true;
@@ -59,23 +61,45 @@ public class Professor {
         this.especializacao = dados.especializacao();
         this.mestrado = dados.mestrado();
         this.doutorado = dados.doutorado();
-        this.aulaDisciplina = dados.aulaDisciplina();
+        this.aula_disciplina = dados.aula_disciplina();
         this.pessoa = new Pessoa(dados.pessoa());
         this.endereco = new Endereco(dados.endereco());
     }
 
     public void atualizar(DadosAtualizaProfessor dados) {
-        this.nome = dados.nome();
-        this.graduacao = dados.graduacao();
-        this.instituicao_formacao = dados.instituicao_formacao();
-        this.data_formacao = dados.data_formacao();
-        this.licenciatura = dados.licenciatura();
-        this.especializacao = dados.especializacao();
-        this.mestrado = dados.mestrado();
-        this.doutorado = dados.doutorado();
-        this.aulaDisciplina = dados.aulaDisciplina();
-        this.pessoa.atualizarInformacoesPessoa(dados.pessoa());
-        this.endereco.atualizarInformacoesEndereco(dados.endereco());
+        if(dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if(dados.graduacao() != null) {
+            this.graduacao = dados.graduacao();
+        }
+        if (dados.instituicao_formacao() != null) {
+            this.instituicao_formacao = dados.instituicao_formacao();
+        }
+        if (dados.data_formacao() != null) {
+            this.data_formacao = dados.data_formacao();
+        }
+        if (dados.licenciatura() == false || dados.licenciatura() == true) {
+            this.licenciatura = dados.licenciatura();
+        }
+        if (dados.especializacao() != null) {
+            this.especializacao = dados.especializacao();
+        }
+        if (dados.mestrado() != null) {
+            this.mestrado = dados.mestrado();
+        }
+        if(dados.doutorado() != null) {
+            this.doutorado = dados.doutorado();
+        }
+        if(dados.aula_disciplina() != null) {
+            this.aula_disciplina = dados.aula_disciplina();
+        }
+        if(dados.pessoa() != null) {
+            this.pessoa.atualizarInformacoesPessoa(dados.pessoa());
+        }
+        if(dados.endereco() != null) {
+            this.endereco.atualizarInformacoesEndereco(dados.endereco());
+        }
     }
 
     public void inativar() {

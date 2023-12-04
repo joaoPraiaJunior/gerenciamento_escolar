@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.gerenciamento_escolar.api.entity.model.RH.RH;
+import com.gerenciamento_escolar.api.entity.model.rh.RH;
 
 public interface RHRepository  extends JpaRepository<RH, Long>{
     Page<RH> findAllByAtivoTrue(Pageable paginacao);

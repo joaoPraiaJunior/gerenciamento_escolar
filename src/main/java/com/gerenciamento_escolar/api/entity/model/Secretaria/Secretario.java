@@ -1,7 +1,7 @@
-package com.gerenciamento_escolar.api.entity.model.Secretaria;
+package com.gerenciamento_escolar.api.entity.model.secretaria;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -36,14 +36,14 @@ public class Secretario {
     private Endereco endereco;
 
     @Enumerated(EnumType.STRING)
-    private CargoSecretario cargoSecretario;
+    private CargoSecretario cargo_secretario;
 
     private boolean ativo;
 
         public Secretario(DadosCadastroSecretario dados) {
         this.ativo = true;
         this.nome = dados.nome();
-        this.cargoSecretario = dados.cargoSecretario();
+        this.cargo_secretario = dados.cargo_secretario();
         this.pessoa = new Pessoa(dados.pessoa());
         this.endereco = new Endereco(dados.endereco());
     }
@@ -52,8 +52,8 @@ public class Secretario {
         if (dados.nome() != null) {
             this.nome = dados.nome();
         }
-        if (dados.cargoSecretario() != null) {
-            this.cargoSecretario = dados.cargoSecretario();
+        if (dados.cargo_secretario() != null) {
+            this.cargo_secretario = dados.cargo_secretario();
         }
         if (dados.pessoa() != null) {
             this.pessoa.atualizarInformacoesPessoa(dados.pessoa());

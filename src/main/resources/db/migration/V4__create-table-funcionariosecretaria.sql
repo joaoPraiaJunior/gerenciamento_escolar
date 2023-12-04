@@ -1,7 +1,8 @@
-create table professor(
+create table secretario(
 
     id bigint not null auto_increment,
     nome varchar(100) not null,
+    cargo_secretario varchar(100) not null,
     nome_mae varchar(100),
     nome_pai varchar(100),
     data_nascimento date not null,
@@ -23,14 +24,6 @@ create table professor(
     complemento varchar(100),
     numero varchar(20) not null,
     ativo tinyint(1) not null default 1,
-    aulaDisciplina varchar(100) not null,
-    graduacao varchar(100) not null,
-    instituicao_formacao varchar(100) not null,
-    data_formacao date not null,
-    licenciatura tinyint(1) not null default 0,
-    especializacao varchar(100),
-    mestrado varchar(100),
-    doutorado varchar(100),
 
     primary key(id)
 );

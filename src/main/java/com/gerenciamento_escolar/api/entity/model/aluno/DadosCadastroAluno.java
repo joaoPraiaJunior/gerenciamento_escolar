@@ -1,7 +1,7 @@
 package com.gerenciamento_escolar.api.entity.model.aluno;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.DadosPessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.DadosEndereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.DadosPessoa;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

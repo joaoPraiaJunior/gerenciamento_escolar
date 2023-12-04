@@ -1,12 +1,12 @@
-package com.gerenciamento_escolar.api.entity.model.Diretor;
+package com.gerenciamento_escolar.api.entity.model.diretor;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 public record DadosDetalhamentoDiretor(
         Long id,
         String nome,
-        CargoDiretoria cargoDiretoria,
+        CargoDiretoria cargo_diretoria,
         Pessoa pessoa,
         Endereco endereco
 
@@ -15,7 +15,7 @@ public record DadosDetalhamentoDiretor(
     public DadosDetalhamentoDiretor(Diretor diretor) {
         this(diretor.getId(),
                 diretor.getNome(),
-                diretor.getCargoDiretoria(),
+                diretor.getCargo_diretoria(),
                 diretor.getPessoa(),
                 diretor.getEndereco());
     }

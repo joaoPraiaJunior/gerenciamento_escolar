@@ -1,19 +1,19 @@
-package com.gerenciamento_escolar.api.entity.model.RH;
+package com.gerenciamento_escolar.api.entity.model.rh;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 public record DadosDetalhamentoRH(
         Long id,
         String nome,
-        CargoRH cargoRH,
+        CargoRH cargo_rh,
         Pessoa pessoa,
         Endereco endereco) {
 
     public DadosDetalhamentoRH(RH rh) {
         this(rh.getId(),
                 rh.getNome(),
-                rh.getCargoRH(),
+                rh.getCargo_rh(),
                 rh.getPessoa(),
                 rh.getEndereco());
     }

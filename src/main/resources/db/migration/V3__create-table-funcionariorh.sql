@@ -1,8 +1,8 @@
-create table funcionario_rh(
+create table rh(
 
     id bigint not null auto_increment,
     nome varchar(100) not null,
-    cargoRH varchar(100) not null,
+    cargo_rh varchar(100) not null,
     nome_mae varchar(100),
     nome_pai varchar(100),
     data_nascimento date not null,

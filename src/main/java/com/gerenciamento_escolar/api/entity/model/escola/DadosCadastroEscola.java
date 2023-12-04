@@ -3,7 +3,6 @@ package com.gerenciamento_escolar.api.entity.model.escola;
 import com.gerenciamento_escolar.api.entity.model.endereco.DadosEndereco;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -17,7 +16,7 @@ public record DadosCadastroEscola(
         String cnpj,
 
         @NotBlank(message = "O email é obrigatório")
-        @Email(message = "O email deve ser válido")
+        @Pattern(regexp = "\\w+@\\w+\\.\\w{2,3}(\\.\\w{2})?", message = "O email deve ser válido")
         String email,
 
         @NotBlank(message = "O telefone é obrigatório")

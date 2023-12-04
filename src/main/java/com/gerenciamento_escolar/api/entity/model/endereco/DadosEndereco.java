@@ -19,6 +19,7 @@ public record DadosEndereco(
         String cidade,
 
         @NotBlank(message = "O estado é obrigatório")
+        @Pattern(regexp = "[A-Z]{2}", message = "O estado deve conter 2 letras maiúsculas")
         String estado,
 
         @NotBlank(message = "O número é obrigatório")

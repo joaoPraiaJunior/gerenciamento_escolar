@@ -1,7 +1,7 @@
-package com.gerenciamento_escolar.api.entity.model.RH;
+package com.gerenciamento_escolar.api.entity.model.rh;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -36,14 +36,14 @@ public class RH {
     private Endereco endereco;
 
     @Enumerated(EnumType.STRING)
-    private CargoRH cargoRH;
+    private CargoRH cargo_rh;
 
     private boolean ativo;
 
     public RH(DadosCadastroRH dados) {
         this.ativo = true;
         this.nome = dados.nome();
-        this.cargoRH = dados.cargoRH();
+        this.cargo_rh = dados.cargo_rh();
         this.pessoa = new Pessoa(dados.pessoa());
         this.endereco = new Endereco(dados.endereco());
     }
@@ -52,8 +52,8 @@ public class RH {
         if (dados.nome() != null) {
             this.nome = dados.nome();
         }
-        if (dados.cargoRH() != null) {
-            this.cargoRH = dados.cargoRH();
+        if (dados.cargo_rh() != null) {
+            this.cargo_rh = dados.cargo_rh();
         }
         if (dados.pessoa() != null) {
             this.pessoa.atualizarInformacoesPessoa(dados.pessoa());
