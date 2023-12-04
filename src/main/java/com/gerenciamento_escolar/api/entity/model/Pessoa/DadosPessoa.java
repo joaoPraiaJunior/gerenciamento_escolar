@@ -9,8 +9,6 @@ public record DadosPessoa(
         String nome_pai,
 
         @NotBlank(message = "A data de nascimento é obrigatória")
-
-        @NotBlank(message = "A nacionalidade é obrigatória")
         String data_nascimento,
 
         @NotBlank(message = "A nacionalidade é obrigatória")
