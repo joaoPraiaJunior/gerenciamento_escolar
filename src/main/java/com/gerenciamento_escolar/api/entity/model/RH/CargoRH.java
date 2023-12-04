@@ -1,4 +1,4 @@
-package com.gerenciamento_escolar.api.entity.model.RH;
+package com.gerenciamento_escolar.api.entity.model.rh;
 
 public enum CargoRH {
     AUXILIAR,

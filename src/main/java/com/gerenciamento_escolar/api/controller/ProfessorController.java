@@ -62,6 +62,8 @@ public class ProfessorController {
         return ResponseEntity.ok(new DadosDetalhamentoProfessor(professor));
     }
 
+
+
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity deletar(@PathVariable Long id) {

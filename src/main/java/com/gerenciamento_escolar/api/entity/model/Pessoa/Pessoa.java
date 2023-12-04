@@ -1,4 +1,4 @@
-package com.gerenciamento_escolar.api.entity.model.Pessoa;
+package com.gerenciamento_escolar.api.entity.model.pessoa;
 
 import java.time.LocalDate;
 
@@ -18,7 +18,7 @@ public class Pessoa {
     private LocalDate data_nascimento;
     private String nacionalidade;
     private String naturalidade;
-    private char genero;
+    private String genero;
     private String estado_civil;
     private String cpf;
     private String rg;
@@ -30,7 +30,7 @@ public class Pessoa {
     public Pessoa(DadosPessoa dados) {
         this.nome_mae = dados.nome_mae();
         this.nome_pai = dados.nome_pai();
-        this.data_nascimento = LocalDate.parse(dados.data_nascimento());
+        this.data_nascimento = dados.data_nascimento();
         this.nacionalidade = dados.nacionalidade();
         this.naturalidade = dados.naturalidade();
         this.genero = dados.genero();
@@ -38,7 +38,7 @@ public class Pessoa {
         this.cpf = dados.cpf();
         this.rg = dados.rg();
         this.orgao_emissor = dados.orgao_emissor();
-        this.data_emissao = LocalDate.parse(dados.data_emissao());
+        this.data_emissao = dados.data_emissao();
         this.email = dados.email();
         this.telefone = dados.telefone();
     }
@@ -53,7 +53,7 @@ public class Pessoa {
         }
 
         if(dados.data_nascimento() != null) {
-            this.data_nascimento = LocalDate.parse(dados.data_nascimento());
+            this.data_nascimento = dados.data_nascimento();
         }
 
         if(dados.nacionalidade() != null) {
@@ -64,7 +64,7 @@ public class Pessoa {
             this.naturalidade = dados.naturalidade();
         }
 
-        if(dados.genero() != 0) {
+        if(dados.genero() != null) {
             this.genero = dados.genero();
         }
 
@@ -85,7 +85,7 @@ public class Pessoa {
         }
 
         if(dados.data_emissao() != null) {
-            this.data_emissao = LocalDate.parse(dados.data_emissao());
+            this.data_emissao = dados.data_emissao();
         }
 
         if(dados.email() != null) {

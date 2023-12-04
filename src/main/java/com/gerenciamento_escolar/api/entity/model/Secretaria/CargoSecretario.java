@@ -1,4 +1,4 @@
-package com.gerenciamento_escolar.api.entity.model.Secretaria;
+package com.gerenciamento_escolar.api.entity.model.secretaria;
 
 public enum CargoSecretario {
     AGENTE,

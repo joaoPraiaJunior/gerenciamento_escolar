@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.gerenciamento_escolar.api.entity.model.Secretaria.DadosAtualizaSecretario;
-import com.gerenciamento_escolar.api.entity.model.Secretaria.DadosCadastroSecretario;
-import com.gerenciamento_escolar.api.entity.model.Secretaria.DadosDetalhamentoSecretario;
-import com.gerenciamento_escolar.api.entity.model.Secretaria.DadosListagemSecretario;
-import com.gerenciamento_escolar.api.entity.model.Secretaria.Secretario;
+import com.gerenciamento_escolar.api.entity.model.secretaria.DadosAtualizaSecretario;
+import com.gerenciamento_escolar.api.entity.model.secretaria.DadosCadastroSecretario;
+import com.gerenciamento_escolar.api.entity.model.secretaria.DadosDetalhamentoSecretario;
+import com.gerenciamento_escolar.api.entity.model.secretaria.DadosListagemSecretario;
+import com.gerenciamento_escolar.api.entity.model.secretaria.Secretario;
 import com.gerenciamento_escolar.api.repository.SecretarioRepository;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -29,7 +29,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/funcionario-secretaria")
 @SecurityRequirement(name = "bearer-key")
-public class SecretarioControler {
+public class SecretarioController {
 
     @Autowired
     private SecretarioRepository repository;

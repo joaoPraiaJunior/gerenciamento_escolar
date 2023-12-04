@@ -1,7 +1,7 @@
-package com.gerenciamento_escolar.api.entity.model.Diretor;
+package com.gerenciamento_escolar.api.entity.model.diretor;
 
-import com.gerenciamento_escolar.api.entity.model.Pessoa.Pessoa;
 import com.gerenciamento_escolar.api.entity.model.endereco.Endereco;
+import com.gerenciamento_escolar.api.entity.model.pessoa.Pessoa;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -36,14 +36,14 @@ public class Diretor {
     private Endereco endereco;
 
     @Enumerated(EnumType.STRING)
-    private CargoDiretoria cargoDiretoria;
+    private CargoDiretoria cargo_diretoria;
 
     private boolean ativo;
 
     public Diretor(DadosCadastroDiretor dados) {
         this.ativo = true;
         this.nome = dados.nome();
-        this.cargoDiretoria = dados.cargoDiretoria();
+        this.cargo_diretoria = dados.cargo_diretoria();
         this.pessoa = new Pessoa(dados.pessoa());
         this.endereco = new Endereco(dados.endereco());
     }
@@ -52,8 +52,8 @@ public class Diretor {
         if (dados.nome() != null) {
             this.nome = dados.nome();
         }
-        if (dados.cargoDiretoria() != null) {
-            this.cargoDiretoria = dados.cargoDiretoria();
+        if (dados.cargo_diretoria() != null) {
+            this.cargo_diretoria = dados.cargo_diretoria();
         }
         if (dados.pessoa() != null) {
             this.pessoa.atualizarInformacoesPessoa(dados.pessoa());
