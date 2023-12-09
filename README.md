@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desen
     - [x] Login
     - [x] Permanecer logado - Token
 
-9. [x] Matrícula de alunos;
+9. [x] Matrícular alunos;
 10. [x] Cancelamento de matrículas de alunos.
 
 -------------
