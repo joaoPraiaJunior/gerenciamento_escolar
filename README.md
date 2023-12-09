@@ -21,15 +21,15 @@ Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desen
 5. [x] CRUD de Professores;
 6. [x] CRUD de Alunos;
 7. [x] Autenticação de usuários;
-        - [x] Login
-        - [x] Permanecer logado - Token
+    - [x] Login
+    - [x] Permanecer logado - Token
 
 8. [x] Matrícula de alunos;
 9. [x] Cancelamento de matrículas de alunos.
 
 -------------
 
-## :hammer: Tecnologias utilizadas para o desenvolvimento do projeto:
+## 🔨 Ferrramentas utilizadas para o desenvolvimento do projeto:
 
 - **[Docker](https://docs.docker.com/)**
 - **[Java 17](https://www.oracle.com/java)**
