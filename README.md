@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desen
 
 -------------
 
-## 🔨 Ferrramentas utilizadas para o desenvolvimento do projeto:
+## 🔨 Ferramentas utilizadas para o desenvolvimento do projeto:
 
 - **[Docker](https://docs.docker.com/)**
 - **[Java 17](https://www.oracle.com/java)**
