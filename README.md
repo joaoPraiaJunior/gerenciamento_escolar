@@ -20,12 +20,13 @@ Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desen
 4. [x] CRUD de Funcionários da Secretaria;
 5. [x] CRUD de Professores;
 6. [x] CRUD de Alunos;
-7. [x] Autenticação de usuários;
+7. [x] CRUD de Disciplinas;
+8. [x] Autenticação de usuários;
     - [x] Login
     - [x] Permanecer logado - Token
 
-8. [x] Matrícula de alunos;
-9. [x] Cancelamento de matrículas de alunos.
+9. [x] Matrícula de alunos;
+10. [x] Cancelamento de matrículas de alunos.
 
 -------------
 
