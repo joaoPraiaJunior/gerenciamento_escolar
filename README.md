@@ -44,6 +44,7 @@ Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desen
 - **[Flyway](https://flywaydb.org)**
 - **[Lombok](https://projectlombok.org)**
 - **[Auth0 java-jwt](https://github.com/auth0/java-jwt)**
+- **[OpenAPI Swagger](https://swagger.io/docs/specification/about/)**
 
 -------------
 
