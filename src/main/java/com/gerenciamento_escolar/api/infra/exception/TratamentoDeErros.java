@@ -12,6 +12,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.gerenciamento_escolar.api.service.validations.ValidacaoException;
+
 import jakarta.persistence.EntityNotFoundException;
 
 @RestControllerAdvice
@@ -25,6 +27,11 @@ public class TratamentoDeErros {
     public ResponseEntity TratadorDeErros400(MethodArgumentNotValidException ex) {
         var erros = ex.getFieldErrors();
         return ResponseEntity.badRequest().body(erros.stream().map(DadosErrosValidacao::new).toList());
+    }
+
+    @ExceptionHandler(ValidacaoException.class)
+    public ResponseEntity tratarErroRegraDeNegocio(ValidacaoException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
     }
 
     @ExceptionHandler(BadCredentialsException.class)
@@ -44,7 +51,7 @@ public class TratamentoDeErros {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity tratarErro500(Exception ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " +ex.getLocalizedMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + ex.getLocalizedMessage());
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
@@ -58,4 +65,3 @@ public class TratamentoDeErros {
         }
     }
 }
-
