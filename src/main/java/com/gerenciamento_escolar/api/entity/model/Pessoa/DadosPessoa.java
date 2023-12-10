@@ -13,6 +13,7 @@ public record DadosPessoa(
         
         String nome_pai,
 
+        @NotBlank(message = "Data de nascimento é obrigatória")
         @JsonFormat(pattern = "dd/MM/yyyy")
         LocalDate data_nascimento,
 
