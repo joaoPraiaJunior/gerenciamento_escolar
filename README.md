@@ -1,12 +1,12 @@
 # Sistema de Gerenciamento Escolar
 
-## :computer: Descrição acerca do projeto
+## :memo: Descrição acerca do projeto
 Sistema de Gerenciamento Escolar. O sistema tem como finalidade gerenciar as demandas acadêmicas como cadastro e matrículas de alunos, cadastro de professores e demais colaboradores, histórico escolar e diário dos alunos, biblioteca, informações para alunos, pais e professores, processos seletivos, disciplinas, financeiro etc.
 
 -------------
 
-## :memo: Licença
-Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desenvolvimento Web Back-end e Metodologia Ágeis de Desenvolvimento. O projeto foi idealizado pelos alunos:
+## :computer: Desenvolvedores
+Esse projeto foi desenvolvido como parte da avaliação das disciplinas de Desenvolvimento Web Back-end e Metodologia Ágeis de Desenvolvimento do Curso de Especialização em Desenvolvimento Web do Instituto Federal do Sul de Minas Gerais. O projeto foi idealizado pelos alunos:
 1.	Edson Jarandia Nunes
 2.	João Antonio Rodrigues Praia Junior
 3.	Mateus Pinto da Silva
