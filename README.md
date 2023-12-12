@@ -1,12 +1,12 @@
 # Sistema de Gerenciamento Escolar
 <div class="d-flex flex-justify-between">
-<img src="https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png" alt="logo java" height="50" style="padding-right:10px;">
-<img src="https://user-images.githubusercontent.com/25181517/183891303-41f257f8-6b3d-487c-aa56-c497b880d0fb.png" alt="logo Spring Boot" height="50" style="padding-right:10px;">
-<img src="https://user-images.githubusercontent.com/25181517/117207242-07d5a700-adf4-11eb-975e-be04e62b984b.png" alt="logo Maven" height="50" style="padding-right:10px;">
-<img src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="logo API Rest" height="50" style="padding-right:10px;">
-<img src="https://user-images.githubusercontent.com/25181517/186711335-a3729606-5a78-4496-9a36-06efcc74f800.png" alt="logo Swagger" height="50" style="padding-right:10px;">
-<img src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" alt="logo Swagger" height="50" style="padding-right:10px;">
-<img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" alt="logo Docker" height="50" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png" alt="logo java" height="40" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/183891303-41f257f8-6b3d-487c-aa56-c497b880d0fb.png" alt="logo Spring Boot" height="40" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/117207242-07d5a700-adf4-11eb-975e-be04e62b984b.png" alt="logo Maven" height="40" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c402-4009-8c47-476fc89718ad.png" alt="logo API Rest" height="40" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/186711335-a3729606-5a78-4496-9a36-06efcc74f800.png" alt="logo Swagger" height="40" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" alt="logo Swagger" height="40" style="padding-right:10px;">
+<img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" alt="logo Docker" height="40" style="padding-right:10px;">
 </div>
 
 ## :memo: Descrição acerca do projeto
